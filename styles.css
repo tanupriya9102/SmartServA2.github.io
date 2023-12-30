@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.step-box {
+    border: 2px solid black;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    width: calc(50% - 20px); /* Adjust the width as needed */
+    height: 300px; /* Set a fixed height for both boxes */
+}
+
+#step3Box {
+    width: 100%; /* Set box 3 to full width */
+}
+
+.input-container {
+    text-align: center; /* Center the input elements */
+}
+
+input, select {
+    margin-bottom: 10px;
+    display: block; /* Display inputs and selects as block elements */
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+select {
+    width: calc(100% - 12px); /* Adjust width to account for padding */
+    padding: 5px;
+}
+
+button {
+    font-size: 1em; /* Adjust font size as needed */
+    padding: 5px 8px; /* Adjust padding as needed */
+}
+
+#fields {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#availableFieldsContainer,
+#selectedFieldsContainer {
+    flex: 1;
+}
+
+#buttonsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.table-container {
+    text-align: center; /* Center the table */
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    display: inline-block; /* Display the table inline */
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>JSON Viewer</title>
+</head>
+<body>
+    <div id="app">
+        <!-- Step 1 Box -->
+        <div class="step-box" id="step1Box">
+            <h3>Step 1: Load the File</h3>
+            <input type="file" id="fileInput" />
+            <button onclick="handleFile()">Load</button>
+        </div>
+
+        <!-- Step 2 Box -->
+        <div class="step-box" id="step2Box">
+            <h3>Step 2: Specify Format</h3>
+            <label for="fileType">File Type:</label>
+            <select id="fileType">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+            </select>
+
+            <label for="charEncoding">Character Encoding:</label>
+            <select id="charEncoding">
+                <option value="utf8">UTF-8</option>
+                <option value="utf16">UTF-16</option>
+            </select>
+
+            <label for="delimiter">Delimiter:</label>
+            <select id="delimiter">
+                <option value="comma">Comma (,)</option>
+                <option value="semicolon">Semicolon (;)</option>
+            </select>
+
+            <label for="hasHeader">Has Header:</label>
+            <input type="checkbox" id="hasHeader" />
+        </div>
+
+        <!-- Step 3 Box -->
+        <div class="step-box" id="step3Box">
+            <h3>Step 3: Configure Display</h3>
+            <div id="fields">
+                <div id="availableFieldsContainer">
+                    <label for="availableFields">Available Fields:</label>
+                    <select id="availableFields" multiple></select>
+                </div>
+                <div id="buttonsContainer">
+                    <button onclick="addSelectedFields()">>></button>
+                    <button onclick="removeSelectedFields()">&lt;&lt;</button>
+                </div>
+                <div id="selectedFieldsContainer">
+                    <label for="selectedFields">Fields to be Displayed:</label>
+                    <select id="selectedFields" multiple></select>
+                </div>
+            </div>
+            <button onclick="displayTable()">Display Table</button>
+        </div>
+    </div>
+
+    <!-- Container for centering the table -->
+    <div class="table-container">
+        <table id="dataTable"></table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
